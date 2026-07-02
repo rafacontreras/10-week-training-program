@@ -1,0 +1,9 @@
+{
+  "name": "Training Program Tracker",
+  "short_name": "Training Tracker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#eadcff",
+  "theme_color": "#d9ccff",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]
+}

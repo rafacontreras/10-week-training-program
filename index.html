@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#d9ccff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Training Tracker" />
+  <title>Training Program Tracker</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero glass">
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow">10-week glute plan</p>
+          <h1>Training Program Tracker</h1>
+        </div>
+        <button id="installBtn" class="pill hidden">Install</button>
+      </div>
+      <p id="quote" class="quote"></p>
+      <div class="hero-actions">
+        <button id="startToday" class="primary">Start Today</button>
+        <button id="exportBtn" class="secondary">Export Backup</button>
+      </div>
+      <input id="importFile" class="hidden" type="file" accept="application/json" />
+      <button id="importBtn" class="link-btn">Import backup</button>
+    </header>
+
+    <section class="rings glass" aria-label="Progress rings">
+      <div class="ring-card"><div class="ring" id="weekRing"><span>0%</span></div><small>This week</small></div>
+      <div class="ring-card"><div class="ring" id="programRing"><span>0%</span></div><small>Program</small></div>
+      <div class="ring-card"><div class="ring" id="streakRing"><span>0</span></div><small>Streak</small></div>
+    </section>
+
+
+    <nav class="tabs glass">
+      <button class="tab active" data-tab="today">Today</button>
+      <button class="tab" data-tab="calendar">Calendar</button>
+    </nav>
+
+    <main>
+      <section id="today" class="screen"></section>
+      <section id="calendar" class="screen hidden"></section>
+    </main>
+  </div>
+
+  <div id="toast" role="status"></div>
+  <canvas id="confetti"></canvas>
+  <script src="app.js"></script>
+</body>
+</html>
